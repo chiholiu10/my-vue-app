@@ -15,17 +15,4 @@ describe("TvResult", async () => {
     });
     expect(wrapper.text()).toContain("Test");
   });
-
-  it("Test if filteredList array props exists", () => {
-    let wrapper = mount(TvResult, {
-      props: {
-        filteredList: mockData,
-      },
-      global: {
-        stubs: ["router-link", "router-view"],
-      },
-    });
-
-    expect(wrapper.find("li").exists()).toBeTruthy();
-  });
 });

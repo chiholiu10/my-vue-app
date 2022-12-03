@@ -11,7 +11,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="scrolling-wrapper" data-testid="tv-list-test">
+  <div class="scrolling-wrapper">
     <h2>{{ headingTitle }}</h2>
     <ul>
       <li v-for="tv in filteredList" :key="tv.id">
