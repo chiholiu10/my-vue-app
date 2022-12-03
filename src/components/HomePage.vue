@@ -80,7 +80,7 @@ const filteredList = computed(() => {
     <GenreCheckboxes :genres="genres" v-model:selectedGenres="selectedGenres" />
     <SelectRating :ratings="ratings" v-model:selectedRating="selectedRating" />
     <SearchInput v-model:searchTitle="searchTitle" />
-    <TvResult :filteredList="filteredList" />
+    <TvResult headingTitle="Movies" :filteredList="filteredList" />
   </div>
 </template>
 

@@ -7,7 +7,6 @@ export const router = createRouter({
     {
       path: "/",
       component: HomeView,
-      //   activeLinkClassName: "tv-list-anchor",
     },
     {
       path: "/show/:id",

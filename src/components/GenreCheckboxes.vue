@@ -16,17 +16,18 @@ const updateValue = (value) => emit("update:selectedGenres", value);
 </script>
 
 <template>
-<div>
-  <h2>Genres</h2>
-  <div class="genre-checkbox-container">
-    <label v-for="option in genres" :key="option.id">
-      <input
-        type="checkbox"
-        :value="option"
-        @input="updateValue($event.target.value)"
-      />
-      {{ option }}
-    </label>
+  <div>
+    <h2>Genres</h2>
+    <div class="genre-checkbox-container">
+      <label v-for="option in genres" :key="option.id">
+        <input
+          type="checkbox"
+          :value="option"
+          @input="updateValue($event.target.value)"
+        />
+        {{ option }}
+      </label>
+    </div>
   </div>
 </template>
 
@@ -36,7 +37,6 @@ const updateValue = (value) => emit("update:selectedGenres", value);
   flex-wrap: wrap;
   margin: 0;
   margin-top: 20px;
-  padding: 20px;
 }
 label {
   flex: 1 0 33%;
