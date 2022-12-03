@@ -1,18 +1,24 @@
 import { describe, it, expect } from "vitest";
 import { mount } from "@vue/test-utils";
-import { mockData } from "../mockdata/mockdata.js";
-import TvResult from "../components/TvResult.vue";
+// import { mockData } from "../mockdata/mockdata.js";
+import GenreCheckboxes from "../components/GenreCheckboxes.vue";
 
 describe("TvResult", async () => {
-  it("Test TvResult Heading", () => {
-    let wrapper = mount(TvResult, {
+  it("Test GenreCheckboxes heading", () => {
+    let wrapper = mount(GenreCheckboxes, {
       props: {
-        headingTitle: "Test",
-      },
-      global: {
-        stubs: ["router-link", "router-view"], // Stubs for router-link and router-view in case they're rendered in your template
+        headingTitle: "Genres",
       },
     });
-    expect(wrapper.text()).toContain("Test");
+    expect(wrapper.text()).toContain("Genres");
+  });
+
+  it("Test GenreCheckboxes props", () => {
+    let wrapper = mount(GenreCheckboxes, {
+      props: {
+        headingTitle: "Genres",
+      },
+    });
+    expect(wrapper.text()).toContain("Genres");
   });
 });

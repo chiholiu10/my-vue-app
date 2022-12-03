@@ -4,13 +4,13 @@ import { mockData } from "../mockdata/mockdata.js";
 import TvResult from "../components/TvResult.vue";
 
 describe("TvResult", async () => {
-  it("Test TvResult Heading", () => {
+  it("Test TvResult heading", () => {
     let wrapper = mount(TvResult, {
       props: {
         headingTitle: "Test",
       },
       global: {
-        stubs: ["router-link", "router-view"], // Stubs for router-link and router-view in case they're rendered in your template
+        stubs: ["router-link", "router-view", "vue3-star-ratings"], // Stubs for router-link and router-view in case they're rendered in your template
       },
     });
     expect(wrapper.text()).toContain("Test");
@@ -22,7 +22,7 @@ describe("TvResult", async () => {
         filteredList: mockData,
       },
       global: {
-        stubs: ["router-link", "router-view"],
+        stubs: ["router-link", "router-view", "vue3-star-ratings"],
       },
     });
 

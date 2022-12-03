@@ -2,12 +2,18 @@
 defineProps({
   genres: {
     type: Array,
-    required: true,
     default: [],
+    required: true,
   },
   selectedGenres: {
     type: Array,
     default: [],
+    required: true,
+  },
+  headingTitle: {
+    type: String,
+    default: "",
+    required: true,
   },
 });
 
@@ -17,7 +23,7 @@ const updateValue = (value) => emit("update:selectedGenres", value);
 
 <template>
   <div>
-    <h2>Genres</h2>
+    <h2>{{ headingTitle }}</h2>
     <div class="genre-checkbox-container">
       <label v-for="option in genres" :key="option.id">
         <input
